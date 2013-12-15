@@ -88,19 +88,8 @@
 //
 
 
-  
-//temporary errors on    
-//ini_set('display_errors', "on");
-
-session_start();
-//connect to our database
-include_once('../../private/includes/ConnectToDatabase.inc');
-
-//include login functions
-require_once('../../private/includes/login_funcs.inc');
-
 //include sepa classes
-include_once('sepaclass.php');    
+include_once('sepa/sepa.php');
 
 //skip everything if user is not logged in
 if(user_isloggedin())
