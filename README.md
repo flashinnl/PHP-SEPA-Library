@@ -1,7 +1,9 @@
-# PHP-SEPA-files
+# PHP-SEPA-Library
 
-Creation of SEPA XML files according pain.008.001.02 in replacement of CLIEOP files. 
-Originally developed by MarcelGroot/PHP-SEPA-files. 
+Creation of SEPA XML files according pain.008.001.02 in replacement of CLIEOP files.
+Originally developed by MarcelGroot/PHP-SEPA-files.
+Transforming this into a library that will fit our needs and maybe others.
+First goal is transforming our CLIEOP03 environment into SEPA files as accepted by our bank: Rabobank.
 
 
 ## Overview
@@ -13,3 +15,4 @@ Originally developed by MarcelGroot/PHP-SEPA-files.
 ## Changelog
 
 - 15-12-2013 - Forked repo from MarcelGroot/PHP-SEPA-files and startup development
+
