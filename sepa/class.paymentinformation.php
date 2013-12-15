@@ -35,25 +35,25 @@ class PaymentInformation {
 
     //2.1 <PmtInfId> [1..1], PaymentInformationIdentification
     //Format: Text, Maxlenght: 35
-    private var $_PmtInfId;
+    private $_PmtInfId;
 
     //2.2 <PmtMtd> [1..1], PaymentMethod
     //Format: allways 'DD'
-    private var $_PmtMtd         = 'DD';
+    private $_PmtMtd         = 'DD';
 
     //2.3 <BtchBookg> [0..1], Batchbooking
     //Format: Either false or true
     // false: booking per transaction is requested
     // true : batch booking is requested
-    private var $_BtchBookg      = 'false'; 
+    private $_BtchBookg      = 'false'; 
 
     //2.4 <NbOfTxs> [0..1], NumberOfTransactions
     //Format: Max15NumericText
-    private var $_PmtInfNbOfTxs  = 0; 
+    private $_PmtInfNbOfTxs  = 0; 
 
     //2.5 <CtrlSum> [0..1], ControlSum
     //Format: DecimalNuber, fractionDigits:17 totalDigits: 18
-    private var $_PmtInfCtrlSum  = 0; 
+    private $_PmtInfCtrlSum  = 0; 
 
     //2.6 <PmtTpInf> [0..1], PaymentTypeInformation 
     //PaymentTypeInformation variables are:
@@ -69,23 +69,23 @@ class PaymentInformation {
     //2.8 <SvcLvl> [0..1], 2.9 <Cd> [1..1]
     //Service Level Code
     //Format: allways 'SEPA'
-    private var $_SvcLvlCd       = 'SEPA';
+    private $_SvcLvlCd       = 'SEPA';
 
     //2.11 <LclInstrm> [0..1], 2.12 <Cd> [1..1]
     //Service Level Code
     //Format: allways 'CORE'
-    private var $_LclInstrmCd    = 'CORE';    
+    private $_LclInstrmCd    = 'CORE';    
 
     //2.14 <SeqTp> [0..1]
     //Must contain one of the values "FRST", "RCUR", "FNAL" or "OOFF"
-    private var $_SeqTp          = 'FRST';
+    private $_SeqTp          = 'FRST';
 
     //2.15 <CtgyPurp>
     // Not used
 
     //2.18 <ReqdColltnDt> [1..1], RequestedCollectionDate
     //Format: date
-    private var $_ReqdColltnDt;
+    private $_ReqdColltnDt;
 
     //2.19 <Cdtr> [1..1], Creditor
     //Creditor variables are:
@@ -98,13 +98,13 @@ class PaymentInformation {
 
     //2.19 <Cdtr> [1..1], <Nm> [0..1], CreditorName 
     //Format: Text, MaxLength 70
-    private var $_CdtrNm;
+    private $_CdtrNm;
 
     //2.19 <Cdtr> [1..1], <PstlAdr> [0..1]
     //Creditor PostalAddress
     //Format: Text
-    private var $_CdtrPstlAdr1;
-    private var $_CdtrPstlAdr2;
+    private $_CdtrPstlAdr1;
+    private $_CdtrPstlAdr2;
 
     //2.19 <Cdtr> [1..1], <Id> [0..1]
     //Not Used
@@ -112,7 +112,7 @@ class PaymentInformation {
     //2.19 <Cdtr> [1..1], <CtryOfRes> [0..1]
     //Creditor CountryOfResidence
     //Format: Code
-    private var $_CdtrCtryOfRes ='NL';
+    private $_CdtrCtryOfRes ='NL';
 
     //2.19 <Cdtr> [1..1], <CtctDtls> [0..1]
     //Not Used
@@ -120,12 +120,12 @@ class PaymentInformation {
     //2.20 <CdtrAcct> [1..1], <Id> [1..1]
     //CreditorAccount Identification
     //Format: IBAN, Sparta IBAN number
-    private var $_CdtrIBAN       = 'NL12RABO0345678912';
+    private $_CdtrIBAN       = 'NL12RABO0345678912';
 
     //2.21 <CdtrAgt> [1..1], <FinInstnId> [1..1]
     //CreditorAgent, FinancialInstitutionIdentification
     //Format: BIC, Sparta Rabobank BIC code
-    private var $_CdtrBIC        = 'RABONL2U';  
+    private $_CdtrBIC        = 'RABONL2U';  
 
     //2.22 <CdtrAgtAcct>, [0..1] CreditorAgentAccount
     //Not Used
@@ -161,18 +161,18 @@ class PaymentInformation {
     //Data Type: Max35Text
     //Format: maxLength: 35
     //minLength: 1
-    private var $_CstmrNb        = 'CustomerNumber';
+    private $_CstmrNb        = 'CustomerNumber';
 
     //2.27 <CdtrScheId>, <Id>, <PrvtId>, <Othr>, <SchmeNm>, <Prtry>
     //EPC: 'Scheme Name'under 'Other' must specify 'SEPA' under 'Proprietary'
     //Value always 'SEPA'
-    private var $_CdtrSchmeIdPrtry        = 'SEPA';
+    private $_CdtrSchmeIdPrtry        = 'SEPA';
 
     // - 2.28 <DrctDbtTxInf>, DirectDebitTransactionInformation
     //See class DirectDebitTransactionInformation
 
     //placeholder for DirectDebitTransactionInformation
-    private var $XMLDirectDebitInformationText ='';
+    private $XMLDirectDebitInformationText ='';
 
     //define a standard RequestedCollectionDate over five days    
     public function __construct() {

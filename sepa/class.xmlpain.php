@@ -24,23 +24,23 @@ class XMLPain {
 
     //1.1 <MsgId> [1..1], MessageIdentification
     //Format: Text, MaxLength: 35, MinLenght: 1
-    private var $_MsgId ;  
+    private $_MsgId;
 
     //1.2 <CreDtTm> [1..1], CreationDateTime
     //Format: ISODateTime e.g.: 2012-05-12T15:03:34; 
-    private var $_CreDtTm;     
+    private $_CreDtTm;     
 
     //1.3 <Authstn>, Authorisation 
     //Not used    
 
     //1.6 <NbOfTxs> [1..1], NumberOfTransactions
     //Format Max15NumericText
-    private var $_GrpHdrNbOfTxs = 0;
+    private $_GrpHdrNbOfTxs = 0;
 
     //1.7 <CtrlSum> [0..1], ControlSum
     //Total of all individual amounts included in the message
     //Format: DecimalNumber, fractionDigits: 17 totalDigits: 18
-    private var $_GrpHdrCtrlSum = 0;
+    private $_GrpHdrCtrlSum = 0;
 
     //1.8 <InitgPty> [1..1], InititatingParty
     //Inititating Party variables are:
@@ -52,7 +52,7 @@ class XMLPain {
 
     //<Nm> [0..1], Name
     //Format: Text, MaxLength 70
-    private var $_Nm;
+    private $_Nm;
 
     //<PstlAdr>[0..1], PostalAddress
     //Not used
@@ -73,7 +73,7 @@ class XMLPain {
     //Not used
 
     //placeholder for PaymentInformation Block
-    private var $XMLPaymentInformationText ='';
+    private $XMLPaymentInformationText ='';
 
     // built the properties <MsgId> and <CreDtTm >
     public function __construct() {

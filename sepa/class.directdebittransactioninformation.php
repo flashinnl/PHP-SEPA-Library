@@ -20,37 +20,37 @@ class DirectDebitTransactionInformation {
     //2.29 <PmtId> [1..1], 2.31 <EndToEndId> [1..1]
     //PaymentIdentification, EndToEndIdentification
     //Format: Text, Maxlenght: 35
-    private var $_EndToEndId;   
+    private $_EndToEndId;   
 
     //2.44 <InstdAmt Ccy="EUR">, [1..1], InstructedAmount
     //Format: Number, eg 12.34
-    private var $_InstdAmt;  
+    private $_InstdAmt;  
 
     //iso 2.42 <MndtId>,[0..1], MandateIdentification, Text
-    private var $_MndtId    = 'lidmaatschap per';
+    private $_MndtId    = 'lidmaatschap per';
 
     //iso 2.43 <DtOfSgntr>, [0..1], DateOfSignature, Date
-    private var $_DtOfSgntr = '2012-05-12';
+    private $_DtOfSgntr = '2012-05-12';
 
     //2.70 <DbtrAgt> [1..1], <FinInstnId> [1..1], <BIC> [1..1]
     //DebtorAgent, FinancialInstitutionIdentification, BIC
     //Format: Debitor BIC code
-    private var $_DbtrBIC;   
+    private $_DbtrBIC;   
 
     //2.72 <Dbtr> [1..1], <Nm> [0..1]
     //Debitor Name 
     //Format: Text, Maxlenght: 70 
-    private var $_DbtrNm ;  
+    private $_DbtrNm ;  
 
     //2.73 <DbtrAcct> [1..1], <Id> [1..1], <IBAN> [1..1]
     //Debtor Account, Id, IBAN
     //Format: Debitor IBAN code 
-    private var $_DbtrIBAN;
+    private $_DbtrIBAN;
 
     //2.88 <RmtInf> [0..1], <Ustrd> [0..n]
     //RemittanceInformation, Unstructured
     //Format: Text, MaxLength: 140
-    private var $_Description;
+    private $_Description;
 
     // property <EndToEndId>
     public function setEndToEndId($Value) {
